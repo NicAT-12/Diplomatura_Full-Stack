@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Antes de React</title>
+</head>
+
+<body>
+    <header>
+        <h1>El mundo de la música</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Géneros</a></li>
+                <li><a href="#">Bandas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="music-article">
+            <h2>Los beneficios de aprender a tocar guitarra</h2>
+            <img class="article-img" src="./assets/hombre-tocando-guitarra.avif" alt="Hombre tocando guitarra acústica">
+            <p>
+                Tocar la guitarra es un excelente ejercicio para el cerebro y el alma: <strong>estimula la coordinación
+                    motriz, mejora la memoria y potencia la concentración</strong> al tener que coordinar ritmo, acordes
+                y lectura musical. Además, funciona como una poderosa herramienta de liberación emocional y reducción
+                del estrés, ofreciéndote un espacio único de creatividad y desconexión diaria.
+            </p>
+            <ol>
+                <li>Estimulación cognitiva: Mejora la memoria, la concentración y la agilidad mental al obligar al
+                    cerebro a coordinar la lectura musical, el ritmo y el movimiento independiente de las manos.
+                </li>
+
+                <li>Bienestar emocional: Funciona como un excelente canalizador de emociones y un reductor natural del
+                    estrés, promoviendo la relajación a través de la música.
+                </li>
+
+                <li>Desarrollo de la coordinación: Potencia la psicomotricidad fina y la memoria muscular, mejorando la
+                    destreza y la sincronización entre el oído y las manos.
+                </li>
+            </ol>
+        </article>
+        <form id="music-form">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <label for="usuarioEmail">Dirección de Email:</label>
+                <input id="usuarioEmail" name="usuarioEmail" type="email" placeholder="usuario@ejemplo.com">
+            </div>
+            <div>
+                <label for="generos">Genero:</label>
+                <select name="generos" id="generos">
+                    <option value="">- Elegir una opción - </option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Blues">Blues</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <small>Nicolas Tissoni - 2026</small>
+    </footer>
+</body>
+
+</html>

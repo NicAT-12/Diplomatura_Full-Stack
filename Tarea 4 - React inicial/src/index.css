@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.tarjeta {
+    background-color: white;
+    /* Fondo claro */
+    border-radius: 16px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Texto centrado */
+    padding: 20px;
+    width: 250px;
+}
+
+.tarjeta img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tarjeta h2,
+.tarjeta h3,
+.tarjeta p {
+    margin: 10px 0;
+}

@@ -1,0 +1,153 @@
+:root {
+    --color-principal: #7c3aed;
+    --color-secundario: #06b6d4;
+    --fuente-base: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111827;
+    color: #f9fafb;
+    font-family: var(--fuente-base);
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+.music-article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1f2937;
+    border: 2px solid var(--color-principal);
+    border-radius: 12px;
+}
+
+.music-article h2 {
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+}
+
+.music-article p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.music-article ol {
+    padding-left: 1.5rem;
+}
+
+.music-article li {
+    margin-bottom: 0.75rem;
+}
+
+.article-img {
+    display: block;
+    max-width: 300px;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+
+#music-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1f2937;
+    border: 2px solid var(--color-principal);
+    border-radius: 12px;
+}
+
+#music-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#music-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#music-form input,
+#music-form select {
+    padding: 0.75rem;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+#music-form input:focus,
+#music-form select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+#music-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#music-form button:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+.music-article,
+#music-form {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #374151;
+}
+
+footer small {
+    color: #9ca3af;
+}
