@@ -60,8 +60,8 @@ html-css_el-mundo-de-la-musica/
 
 **Nicolas Tissoni**
 
-Curso: Desarrollo Web
-Unidad: Antes de React
+Diplomatura Full-Stack
+Tarea 1 - Antes de React
 
 ## Bibliografía y fuentes consultadas
 

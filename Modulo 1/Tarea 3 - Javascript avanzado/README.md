@@ -1,56 +1,72 @@
 # Gestor de Tareas - JavaScript Avanzado
 
-Proyecto realizado para practicar JavaScript avanzado mediante clases, promesas, asincronía y métodos de arrays.
+Proyecto desarrollado como parte de la **Diplomatura Full-Stack** para poner en práctica conceptos de JavaScript avanzado mediante la creación de un gestor de tareas utilizando Programación Orientada a Objetos y programación asíncrona.
 
 ## Objetivos
 
 - Crear clases con propiedades y métodos.
-- Simular asincronía con Promise y setTimeout.
-- Usar async/await.
-- Manipular arrays con forEach, find y filter.
+- Simular asincronía utilizando `Promise` y `setTimeout`.
+- Implementar operaciones asíncronas con `async/await`.
+- Manipular arrays mediante los métodos `forEach`, `find` y `filter`.
 
-## Instalación y ejecución
+## Funcionalidades
 
-1. Clonar el repositorio:
+- Agregar nuevas tareas.
+- Listar todas las tareas.
+- Buscar tareas por título.
+- Mostrar únicamente las tareas completadas.
+- Simular la carga de tareas de forma asíncrona.
+- Organización del código mediante clases.
+
+## Tecnologías utilizadas
+
+- JavaScript (ES6+)
+- HTML5
+
+## Estructura del proyecto
+
+```text
+.
+├── assets
+│   └── screenshots
+│       └── Captura.png
+├── js
+│   └── main.js
+└── index.html
+```
+
+## Cómo ejecutar el proyecto
+
+1. Clonar el repositorio.
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/NicAT-12/Diplomatura_Full-Stack.git
+```
 
-## Capturas de pantalla
+2. Navegar hasta la carpeta del proyecto.
 
-### Ejecución del programa
+```bash
+cd "Modulo 1/Tarea 3 - Javascript avanzado"
+```
 
-Agregar aquí las capturas de la consola mostrando:
+3. Abrir el archivo `index.html` en el navegador.
 
-- Carga inicial de tareas.
-- Agregado de una nueva tarea.
-- Listado de tareas completadas.
+> Todo el funcionamiento del proyecto se encuentra en `js/main.js`.
 
-Ejemplo:
+## Captura
 
-![Captura de consola](./assets/screenshots/Captura.png)
+![Captura del proyecto](assets/screenshots/Captura.png)
+
+## Repositorio
+
+El código fuente puede encontrarse dentro del siguiente repositorio:
+
+**https://github.com/NicAT-12/Diplomatura_Full-Stack/tree/main/Modulo%201/Tarea%203%20-%20Javascript%20avanzado**
 
 ## Autor
 
-Desarrollado por Nicolas Tissoni.
+**Nicolás Tissoni**
 
-GitHub: https://github.com/NicAT-12
+---
 
-## Bibliografía y fuentes
-
-### Documentación
-
-- MDN Web Docs - Classes:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-
-- MDN Web Docs - Promise:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-
-- MDN Web Docs - Array:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-### Material de estudio
-
-- Flanagan, David. JavaScript: The Definitive Guide. 7th Edition. O'Reilly Media, 2020.
-
-- Freeman, Eric y Robson, Elisabeth. Head First JavaScript Programming. O'Reilly Media, 2014.
+Proyecto realizado como práctica de **JavaScript Avanzado** para la **Diplomatura Full-Stack**.
