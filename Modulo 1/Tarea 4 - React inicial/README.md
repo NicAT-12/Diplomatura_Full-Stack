@@ -69,7 +69,7 @@ La consigna original proponía utilizar NPM. Para este proyecto se utilizó PNPM
 
 ### Vista Escritorio
 
-![Vista Escritorio](./screenshots/captura-tarea-web.png)
+
 
 ### Vista Responsive
 
