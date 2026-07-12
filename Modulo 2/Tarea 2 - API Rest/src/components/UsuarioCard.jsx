@@ -1,0 +1,10 @@
+const UsuarioCard = ({ usuario }) => {
+    return (
+        <li className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <p className="text-lg font-semibold text-gray-800">{usuario.name}</p>
+            <p className="text-sm text-gray-500 mt-1">{usuario.email}</p>
+        </li>
+    )
+}
+
+export default UsuarioCard;
