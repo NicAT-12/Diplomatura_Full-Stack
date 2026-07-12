@@ -114,5 +114,5 @@ Abrí [http://localhost:5173](http://localhost:5173) en tu navegador.
 
 ## Autor
 
-**Nicolas** — [UTN · Diplomatura Full-Stack Web Development](https://www.utn.edu.ar/)  
+**Nicolas Tissoni** — [UTN · Diplomatura Full-Stack Web Development](https://www.utn.edu.ar/)  
 Repositorio: [Diplomatura_Full-Stack](https://github.com/NicAT-12/Diplomatura_Full-Stack)
