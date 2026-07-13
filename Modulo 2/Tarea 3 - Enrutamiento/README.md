@@ -11,6 +11,27 @@ Este proyecto es un mini dashboard desarrollado con **React** y **React Router**
 - Tailwind CSS
 - PropTypes
 
+## Consigna
+
+### 1. Proyecto base
+- Iniciar un nuevo proyecto React (se recomienda Vite).
+- Envolver la app con `BrowserRouter`.
+
+### 2. Rutas básicas
+- Crear tres páginas: `Inicio`, `Nosotros` y `Contacto`.
+- Configurar el enrutamiento con `Routes` y `Route` para que cada URL muestre su página correspondiente.
+- Añadir enlaces de navegación (`Link`) entre ellas.
+
+### 3. Ruta dinámica
+- Crear una página `Producto` que reciba un parámetro en la URL (ej: `/producto/:id`).
+- Mostrar en pantalla el valor del parámetro recibido mediante `useParams`.
+
+### 4. Navegación programática
+- Agregar un botón que redirija a otra página usando `useNavigate`.
+
+### 5. Opcional
+- Agregar un layout con navegación fija y rutas anidadas usando `Outlet`.
+- Simular una ruta protegida que muestre un mensaje si el usuario no está "logueado", usando `useLocation` y `Navigate` para redirección post-login.
 ## Instalación y ejecución
 
 Cloná el repositorio y ejecutá los siguientes comandos:
