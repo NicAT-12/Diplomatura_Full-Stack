@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import UsuarioCard from './UsuarioCard';
-import PropTypes from 'prop-types';
 
 const Usuarios = () => {
     const [usuarios, setUsuarios] = useState([]);
@@ -20,8 +19,6 @@ const Usuarios = () => {
             }
 
             const data = await response.json();
-
-            console.log(data);
 
             setUsuarios(data);
         } catch (error) {
@@ -89,9 +86,5 @@ const Usuarios = () => {
         </div>
     )
 }
-
-Usuarios.propTypes = {
-    usuario: PropTypes.string.isRequired   
-};
 
 export default Usuarios
