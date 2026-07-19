@@ -65,12 +65,17 @@ El formulario incluye:
 
 ## Capturas de pantalla
 
-Las capturas se encuentran en la carpeta `screenshots/` en la raíz del proyecto:
+**Validación de campo obligatorio**
+![Campo obligatorio](./screenshots/campo-obligatorio.png)
 
-- **`campo-obligatorio.png`** — Validación mostrando el mensaje de error cuando un campo requerido queda vacío.
-- **`estados-de-enfoque.png`** — Mensajes en consola al enfocar (`onFocus`) y desenfocar (`onBlur`) los campos.
-- **`valor-de-inputs-en-consola.png`** — Registro en consola de los valores tipeados mediante `onChange`.
-- **`envio-de-data.png`** — Datos capturados en consola tras el envío del formulario (`onSubmit`).
+**Estados de enfoque (onFocus / onBlur)**
+![Estados de enfoque](./screenshots/estados-de-enfoque.png)
+
+**Valores de inputs en consola (onChange)**
+![Valor de inputs en consola](./screenshots/valor-de-inputs-en-consola.png)
+
+**Envío de datos (onSubmit)**
+![Envío de data](./screenshots/envio-de-data.png)
 
 ## Eventos implementados
 
