@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 const App = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { onBlur: rhfOnBlurName, ...restName } = register("nombre", { required: "Este campo es obligatorio" });
-  const { onBlur: rhfOnBlurEmail, ...restEmail } = register("email", { required: "Este campo es obligatorio" });
+  const { onBlur: rhfOnBlurName, onChange: rhfOnChangeName, ...restName } = register("nombre", { required: "Este campo es obligatorio" });
+  const { onBlur: rhfOnBlurEmail, onChange: rhfOnChangeEmail, ...restEmail } = register("email", { required: "Este campo es obligatorio" });
 
   function onSubmit(data) {
     console.log(data);
@@ -19,12 +19,22 @@ const App = () => {
     console.log(`Campo "${e.target.id}" desenfocado`);
   }
 
+  function combinedChangeName(e) {
+    rhfOnChangeName(e);
+    console.log(e.target.value);
+  }
+
+  function combinedChangeEmail(e) {
+    rhfOnChangeEmail(e)
+    console.log(e.target.value);
+  }
+
   function combinedBlurName(e) {
     rhfOnBlurName(e)
     handleBlur(e)
   }
 
-    function combinedBlurEmail(e) {
+  function combinedBlurEmail(e) {
     rhfOnBlurEmail(e)
     handleBlur(e)
   }
@@ -68,6 +78,7 @@ const App = () => {
             onFocus={handleFocus}
             onKeyDown={handleKeyDown}
             onBlur={combinedBlurName}
+            onChange={(e) => combinedChangeName(e)}
             className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
           {errors.nombre && <span>{errors.nombre.message}</span>}
@@ -89,6 +100,7 @@ const App = () => {
             onFocus={handleFocus}
             onKeyDown={handleKeyDown}
             onBlur={combinedBlurEmail}
+            onChange={(e) => combinedChangeEmail(e)}
             className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
           />
           {errors.email && <span>{errors.email.message}</span>}
