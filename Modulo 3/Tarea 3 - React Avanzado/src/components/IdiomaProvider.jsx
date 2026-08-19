@@ -6,7 +6,7 @@ const IdiomaProvider = ({ children }) => {
 
     const cambiarIdioma = useCallback((nuevoIdioma) => {
         setIdioma(nuevoIdioma)
-    }, [setIdioma])
+    }, [])
 
     const value = useMemo(() => {
         return { idioma, cambiarIdioma };
