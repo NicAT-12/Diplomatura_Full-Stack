@@ -13,8 +13,8 @@ Aplicación Angular con módulos de funcionalidad (`UsuariosModule` y `Productos
 ## Instalación y ejecución
 
 ```bash
-git clone <URL-DE-ESTE-REPOSITORIO>
-cd angular-routing-app
+git clone https://github.com/NicAT-12/Diplomatura_Full-Stack.git
+cd "Diplomatura_Full-Stack/Desarrollo en Angular/Tarea 4 - Angular Avanzado Routing"
 npm install
 ng serve
 ```
@@ -30,7 +30,7 @@ ng build --configuration production
 ## Despliegue
 
 - Plataforma: Netlify
-- Enlace: **<COMPLETAR-URL-PUBLICADA>**
+- Enlace: https://strong-zuccutto-f0875e.netlify.app/
 - El archivo `netlify.toml` incluye la regla de reescritura a `index.html` para que las rutas internas funcionen al recargar.
 
 ## Capturas de pantalla
@@ -44,8 +44,8 @@ ng build --configuration production
 
 ## Autor
 
-- Nombre: **<COMPLETAR-NOMBRE-Y-APELLIDO>**
-- Curso: **<COMPLETAR-NOMBRE-DEL-CURSO>**
+- Nombre: Nicolas Tissoni
+- Curso: Diplomatura Full Stack
 - Unidad: Módulo 1, Unidad 4: Angular avanzado. Routing
 
 ## Bibliografía y créditos
