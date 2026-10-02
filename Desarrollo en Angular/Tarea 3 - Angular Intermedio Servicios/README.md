@@ -1,4 +1,4 @@
-# Tarea 3 - Angular intermedio. Servicios
+# Tarea 3 - Angular Intermedio Servicios
 
 ## Descripción breve del proyecto
 Aplicación Angular que gestiona una lista de productos mediante un servicio (`ProductoService`) inyectado en el componente `ListaProductosComponent`. Los precios se muestran usando los pipes estándar `currency` y `date`, y un pipe personalizado `descuento` que calcula el precio final aplicando un porcentaje de descuento. Los estilos están implementados con **TailwindCSS**.
@@ -75,9 +75,8 @@ Luego abrir el navegador en `http://localhost:4200`.
 ### Eliminar producto
 ![Eliminar producto](./screenshots/captura-eliminar-producto.png)
 
-
 ## Créditos del autor
-- Nombre: Nicolás
+- Nombre: Nicolás Tissoni
 - Curso: Diplomatura Full-Stack
 - Unidad: Módulo 1 - Unidad 3, Angular intermedio. Servicios
 
