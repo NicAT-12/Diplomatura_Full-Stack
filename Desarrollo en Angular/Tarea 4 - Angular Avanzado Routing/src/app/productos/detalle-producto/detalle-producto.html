@@ -1,0 +1,31 @@
+<a routerLink="/productos" class="text-sm text-marca underline hover:text-marca-oscuro"
+  >Volver a productos</a
+>
+
+@if (producto(); as p) {
+  <article class="mt-6 max-w-2xl rounded-md border border-tinta/10 bg-white p-6">
+    <p class="text-sm text-marca">{{ p.categoria }}</p>
+    <h1 class="mt-1 text-3xl font-bold">{{ p.nombre }}</h1>
+    <p class="mt-4 text-lg">{{ p.descripcion }}</p>
+
+    <ul class="mt-4 list-disc space-y-1 pl-5 text-tinta/80">
+      @for (d of p.detalles; track d) {
+        <li>{{ d }}</li>
+      }
+    </ul>
+
+    <div class="mt-6 flex items-center justify-between border-t border-tinta/10 pt-4">
+      <p class="text-2xl font-bold">{{ p.precio | currency: 'ARS' : 'symbol-narrow' : '1.0-0' }}</p>
+      @if (p.stock > 0) {
+        <p class="text-sm text-marca">{{ p.stock }} unidades disponibles</p>
+      } @else {
+        <p class="text-sm text-red-700">Sin stock</p>
+      }
+    </div>
+  </article>
+} @else {
+  <section class="mt-6">
+    <h1 class="text-2xl font-bold">No encontramos ese producto</h1>
+    <p class="mt-2 text-tinta/80">Puede que el enlace sea incorrecto o que el producto ya no esté.</p>
+  </section>
+}

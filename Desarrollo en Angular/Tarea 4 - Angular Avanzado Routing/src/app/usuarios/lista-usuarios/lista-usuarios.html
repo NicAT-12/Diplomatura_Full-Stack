@@ -1,0 +1,18 @@
+<h1 class="text-3xl font-bold">Usuarios</h1>
+<p class="mt-2 text-tinta/80">Equipo que atiende la tienda.</p>
+
+<ul class="mt-8 divide-y divide-tinta/10 rounded-md border border-tinta/10 bg-white">
+  @for (u of usuarios; track u.id) {
+    <li class="flex items-center gap-4 p-4">
+      <span
+        class="flex size-10 shrink-0 items-center justify-center rounded-full bg-marca font-semibold text-white"
+        aria-hidden="true"
+        >{{ u.nombre[0] }}</span
+      >
+      <div>
+        <p class="font-semibold">{{ u.nombre }}</p>
+        <p class="text-sm text-tinta/70">{{ u.rol }} · {{ u.email }}</p>
+      </div>
+    </li>
+  }
+</ul>

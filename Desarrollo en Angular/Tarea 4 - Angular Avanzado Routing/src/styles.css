@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tinta: #1d2a2e;
+  --color-papel: #f3f5f2;
+  --color-marca: #1f6f6b;
+  --color-marca-oscuro: #17524f;
+  --color-destaque: #e0a526;
+}
+
+body {
+  @apply bg-papel text-tinta antialiased;
+}

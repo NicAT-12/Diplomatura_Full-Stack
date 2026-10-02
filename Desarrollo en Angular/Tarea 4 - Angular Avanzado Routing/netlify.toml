@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist/angular-routing-app/browser"
+
+# Necesario para que las rutas internas (/productos/3) funcionen al recargar
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
