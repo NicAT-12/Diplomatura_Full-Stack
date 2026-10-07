@@ -1,0 +1,35 @@
+<section class="mx-auto max-w-xl">
+  <h1 class="font-serif text-3xl font-bold text-cuero-oscuro">Contacto</h1>
+  <p class="mt-2 text-tinta/80">¿Tenés una sugerencia o consulta? Escribinos.</p>
+
+  @if (enviado()) {
+    <p class="mt-6 rounded border border-green-300 bg-green-50 p-4 text-green-800" role="status">
+      ✅ ¡Gracias por tu mensaje! (formulario demostrativo, no se envía a ningún servidor)
+    </p>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="enviar()" class="mt-6 space-y-4 rounded-lg bg-white p-6 shadow" novalidate>
+    <div>
+      <label for="nombre" class="block font-semibold">Nombre</label>
+      <input id="nombre" type="text" formControlName="nombre" class="mt-1 w-full rounded border border-cuero/30 px-3 py-2" />
+      @if (invalido('nombre')) {
+        <p class="mt-1 text-sm text-red-700">Ingresá tu nombre (mínimo 2 caracteres).</p>
+      }
+    </div>
+    <div>
+      <label for="email" class="block font-semibold">Email</label>
+      <input id="email" type="email" formControlName="email" class="mt-1 w-full rounded border border-cuero/30 px-3 py-2" />
+      @if (invalido('email')) {
+        <p class="mt-1 text-sm text-red-700">Ingresá un email válido.</p>
+      }
+    </div>
+    <div>
+      <label for="mensaje" class="block font-semibold">Mensaje</label>
+      <textarea id="mensaje" rows="5" formControlName="mensaje" class="mt-1 w-full rounded border border-cuero/30 px-3 py-2"></textarea>
+      @if (invalido('mensaje')) {
+        <p class="mt-1 text-sm text-red-700">El mensaje debe tener al menos 10 caracteres.</p>
+      }
+    </div>
+    <button type="submit" class="rounded bg-cuero px-6 py-2 text-papel transition hover:bg-cuero-oscuro">Enviar</button>
+  </form>
+</section>

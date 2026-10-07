@@ -1,0 +1,16 @@
+<h1 class="mb-6 font-serif text-3xl font-bold text-cuero-oscuro">Mis favoritos</h1>
+
+@if (favoritos.favoritos().length === 0) {
+  <div class="py-16 text-center">
+    <p class="text-tinta/70">Todavía no guardaste ningún libro.</p>
+    <a routerLink="/libros" class="mt-4 inline-block rounded bg-cuero px-4 py-2 text-papel hover:bg-cuero-oscuro">
+      Explorar libros
+    </a>
+  </div>
+} @else {
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    @for (libro of favoritos.favoritos(); track libro.id) {
+      <app-book-card [libro]="libro" />
+    }
+  </div>
+}

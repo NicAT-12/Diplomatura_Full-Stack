@@ -1,0 +1,10 @@
+<div class="mx-auto max-w-md rounded-lg border border-red-300 bg-red-50 p-6 text-center" role="alert">
+  <p class="text-red-800">⚠️ {{ mensaje() }}</p>
+  <button
+    type="button"
+    (click)="reintentar.emit()"
+    class="mt-4 rounded bg-cuero px-4 py-2 text-papel transition hover:bg-cuero-oscuro"
+  >
+    Reintentar
+  </button>
+</div>

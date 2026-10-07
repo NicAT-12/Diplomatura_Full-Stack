@@ -1,0 +1,42 @@
+<header class="sticky top-0 z-10 bg-cuero-oscuro text-papel shadow-md">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a routerLink="/" (click)="cerrarMenu()" class="font-serif text-2xl font-bold tracking-wide">
+      📚 Biblioteca <span class="text-dorado">Abierta</span>
+    </a>
+
+    <button
+      type="button"
+      class="rounded border border-papel/40 px-3 py-1 md:hidden"
+      aria-label="Abrir o cerrar el menú"
+      (click)="alternarMenu()"
+    >
+      {{ menuAbierto() ? '✕' : '☰' }}
+    </button>
+
+    <nav
+      class="absolute left-0 top-full w-full flex-col gap-1 bg-cuero-oscuro px-4 pb-4 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:p-0"
+      [class.flex]="menuAbierto()"
+      [class.hidden]="!menuAbierto()"
+    >
+      @for (enlace of enlaces; track enlace.ruta) {
+        <a
+          [routerLink]="enlace.ruta"
+          routerLinkActive="border-dorado text-dorado"
+          [routerLinkActiveOptions]="{ exact: enlace.exacto }"
+          (click)="cerrarMenu()"
+          class="border-b-2 border-transparent py-1 transition hover:text-dorado"
+        >
+          {{ enlace.texto }}
+        </a>
+      }
+      <a
+        routerLink="/favoritos"
+        routerLinkActive="border-dorado text-dorado"
+        (click)="cerrarMenu()"
+        class="border-b-2 border-transparent py-1 transition hover:text-dorado"
+      >
+        ♥ Favoritos ({{ favoritos.cantidad() }})
+      </a>
+    </nav>
+  </div>
+</header>

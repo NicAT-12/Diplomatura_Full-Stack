@@ -1,0 +1,86 @@
+<h1 class="mb-6 font-serif text-3xl font-bold text-cuero-oscuro">Catálogo de libros</h1>
+
+<form
+  class="mb-6 grid gap-3 rounded-lg bg-white p-4 shadow md:grid-cols-[1fr_auto_auto_auto]"
+  (submit)="$event.preventDefault(); buscar()"
+>
+  <input
+    type="search"
+    [value]="texto()"
+    (input)="texto.set($any($event.target).value)"
+    placeholder="Buscar por título o autor..."
+    aria-label="Buscar libros"
+    class="rounded border border-cuero/30 px-3 py-2 focus:border-cuero focus:outline-none"
+  />
+  <select
+    [value]="genero()"
+    (change)="cambiarGenero($any($event.target).value)"
+    aria-label="Filtrar por género"
+    class="rounded border border-cuero/30 px-3 py-2"
+  >
+    @for (g of generos; track g.valor) {
+      <option [value]="g.valor" [selected]="g.valor === genero()">{{ g.texto }}</option>
+    }
+  </select>
+  <select
+    [value]="orden()"
+    (change)="cambiarOrden($any($event.target).value)"
+    aria-label="Ordenar resultados"
+    class="rounded border border-cuero/30 px-3 py-2"
+  >
+    @for (o of ordenes; track o.valor) {
+      <option [value]="o.valor" [selected]="o.valor === orden()">{{ o.texto }}</option>
+    }
+  </select>
+  <div class="flex gap-2">
+    <button type="submit" class="flex-1 rounded bg-cuero px-4 py-2 text-papel transition hover:bg-cuero-oscuro">
+      Buscar
+    </button>
+    <button type="button" (click)="limpiar()" class="rounded border border-cuero px-3 py-2 text-cuero hover:bg-cuero/10">
+      Limpiar
+    </button>
+  </div>
+</form>
+
+@switch (estado()) {
+  @case ('cargando') {
+    <app-loading mensaje="Buscando libros..." />
+  }
+  @case ('error') {
+    <app-error-message (reintentar)="reintentar()" />
+  }
+  @case ('ok') {
+    @if (libros().length === 0) {
+      <p class="py-16 text-center text-tinta/70">No encontramos libros con esos criterios.</p>
+    } @else {
+      <p class="mb-4 text-sm text-tinta/70">
+        {{ total() }} resultados · página {{ pagina() }} de {{ totalPaginas() }}
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        @for (libro of libros(); track libro.id) {
+          <app-book-card [libro]="libro" />
+        }
+      </div>
+
+      <nav class="mt-8 flex items-center justify-center gap-4" aria-label="Paginación">
+        <button
+          type="button"
+          [disabled]="pagina() <= 1"
+          (click)="irAPagina(pagina() - 1)"
+          class="rounded bg-cuero px-4 py-2 text-papel transition hover:bg-cuero-oscuro disabled:opacity-40"
+        >
+          ← Anterior
+        </button>
+        <span>Página {{ pagina() }} de {{ totalPaginas() }}</span>
+        <button
+          type="button"
+          [disabled]="pagina() >= totalPaginas()"
+          (click)="irAPagina(pagina() + 1)"
+          class="rounded bg-cuero px-4 py-2 text-papel transition hover:bg-cuero-oscuro disabled:opacity-40"
+        >
+          Siguiente →
+        </button>
+      </nav>
+    }
+  }
+}

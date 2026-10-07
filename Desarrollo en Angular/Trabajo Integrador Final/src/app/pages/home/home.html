@@ -1,0 +1,32 @@
+<section class="rounded-xl bg-cuero-oscuro px-6 py-16 text-center text-papel shadow-lg">
+  <h1 class="font-serif text-4xl font-bold md:text-5xl">Descubrí tu próxima lectura</h1>
+  <p class="mx-auto mt-4 max-w-2xl text-lg text-papel/80">
+    Explorá millones de libros gracias a Open Library, guardá tus favoritos y encontrá todo sobre cada obra.
+  </p>
+  <a
+    routerLink="/libros"
+    class="mt-8 inline-block rounded bg-dorado px-6 py-3 font-semibold text-tinta transition hover:brightness-110"
+  >
+    Explorar el catálogo
+  </a>
+</section>
+
+<section class="mt-12">
+  <h2 class="mb-6 font-serif text-2xl font-bold text-cuero-oscuro">Clásicos destacados</h2>
+
+  @switch (estado()) {
+    @case ('cargando') {
+      <app-loading mensaje="Cargando destacados..." />
+    }
+    @case ('error') {
+      <app-error-message (reintentar)="cargar()" />
+    }
+    @case ('ok') {
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        @for (libro of destacados(); track libro.id) {
+          <app-book-card [libro]="libro" />
+        }
+      </div>
+    }
+  }
+</section>
