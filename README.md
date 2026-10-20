@@ -15,9 +15,10 @@ El repositorio está organizado por curso/tecnología, y dentro de cada uno por 
 * **Módulo 3** — Firebase (configuración, CRUD, autenticación) y React avanzado (Context API).
 * **Trabajo Integrador Final** — Aplicación CRUD "Mis Películas Favoritas", con Firestore y React Router.
 
-### 🔜 Desarrollo en Angular
+### ✅ [Desarrollo en Angular](./Desarrollo%20en%20Angular)
 
-*Próximamente.*
+* **Módulo 1** — Conociendo Angular (Angular CLI, signals, interpolación y event binding), directivas y formularios reactivos, servicios y pipes (estándar y personalizados) y routing avanzado (lazy loading, rutas dinámicas y `localStorage`), con estilos en TailwindCSS.
+* **Trabajo Integrador Final** — "Biblioteca Abierta", aplicación web multisitio para explorar libros con la API de Open Library, con búsqueda, filtros, detalle dinámico y favoritos.
 
 ### 🔜 Desarrollo en NodeJS
 
