@@ -1,6 +1,6 @@
 # Trabajo Final Integrador - Desarrollo en Node.js
 
-**Autor:** Nicolas
+**Autor:** Nicolas Tissoni
 **Curso:** Desarrollo en NodeJS
 **Trabajo:** Trabajo Final Integrador - API para Clon de Chat
 
