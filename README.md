@@ -39,5 +39,3 @@ El objetivo de este repositorio es registrar mi evolución como desarrollador Fu
 ## Autor
 
 **Nicolás Tissoni**
-
-Desarrollador Web en formación | Full Stack Developer Trainee
