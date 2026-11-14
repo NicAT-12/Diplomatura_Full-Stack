@@ -92,21 +92,35 @@ Vite elige el archivo según el modo, así que desarrollo y producción quedan s
 
 ## CORS
 
-El backend usa el middleware `cors` y solo acepta peticiones de los orígenes indicados en `CORS_ORIGINS`. En producción esa variable se configura en Render con las URL del frontend publicado en Firebase Hosting.
+El backend usa el middleware `cors` y solo acepta peticiones de los orígenes indicados en `CORS_ORIGINS`. En producción esa variable se configura en Render con las URL del frontend publicado en Firebase Hosting y con el origen local de desarrollo.
 
 ## Despliegue
 
 ### Backend en Render
 
 1. Crear un nuevo **Web Service** en Render y conectar el repositorio de GitHub.
-2. Indicar `back-end` como **Root Directory**.
-3. Configurar **Build Command** `npm install` y **Start Command** `npm start`.
-4. Cargar las variables de entorno `MONGODB_URI` y `CORS_ORIGINS` (con las URL del frontend en Firebase).
-5. En MongoDB Atlas, en *Network Access*, permitir el acceso desde la IP de Render.
+2. Dejar vacío el campo **Root Directory**, porque Render no admite la tilde de "Integración" en ese campo.
+3. Configurar **Build Command** y **Start Command** entrando a la carpeta del backend:
+
+```
+cd "Desarrollo en NodeJS/Tarea 4 - Integración con Front/back-end" && npm install
+```
+
+```
+cd "Desarrollo en NodeJS/Tarea 4 - Integración con Front/back-end" && npm start
+```
+
+4. Cargar las variables de entorno `MONGODB_URI` y `CORS_ORIGINS`. En producción `CORS_ORIGINS` contiene `https://diplomatura-full-stack.web.app`, `https://diplomatura-full-stack.firebaseapp.com` y `http://localhost:5173`, separados por coma.
+5. En MongoDB Atlas, en *Network Access*, permitir el acceso desde cualquier IP (`0.0.0.0/0`), porque Render usa IPs que cambian.
 
 ### Frontend en Firebase Hosting
 
-1. Completar `front-end/.env.production` con la URL del backend en Render.
+1. Completar `front-end/.env.production` con la URL del backend en Render:
+
+```
+VITE_API_URL=https://diplomatura-full-stack-tarea-4.onrender.com
+```
+
 2. Compilar y desplegar:
 
 ```bash
@@ -123,8 +137,8 @@ firebase deploy --only hosting
 
 ## Enlaces de producción
 
-- **Frontend (Firebase Hosting):** _pendiente de completar_
-- **Backend (Render):** _pendiente de completar_
+- **Frontend (Firebase Hosting):** https://diplomatura-full-stack.web.app
+- **Backend (Render):** https://diplomatura-full-stack-tarea-4.onrender.com
 
 ## Capturas de pantalla
 
