@@ -25,7 +25,7 @@ back-end
 1. Clonar el repositorio y entrar a la carpeta del back-end:
 
    ```bash
-   cd "Trabajo Final Integrador/back-end"
+   cd "Desarrollo en NodeJS/Trabajo Final Integrador/back-end"
    ```
 
 2. Instalar las dependencias:
@@ -302,7 +302,7 @@ Para que el navegador acepte las respuestas, la URL del front debe estar incluid
 ## Despliegue en Render
 
 1. Crear un nuevo Web Service en Render conectado al repositorio de GitHub.
-2. Indicar como directorio raíz `Trabajo Final Integrador/back-end`.
+2. Indicar como directorio raíz `Desarrollo en NodeJS/Trabajo Final Integrador/back-end`.
 3. Comando de build: `npm install`. Comando de inicio: `npm start`.
 4. Cargar las variables de entorno `MONGODB_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN` y `CORS_ORIGIN` (con la URL del front en Vercel).
-5. En MongoDB Atlas, permitir el acceso desde Render en Network Access.
+5. En MongoDB Atlas, entrar a Network Access y agregar la entrada `0.0.0.0/0` (Allow Access From Anywhere), porque la IP de salida de Render en el plan gratuito no es fija. Esperar a que figure como Active.

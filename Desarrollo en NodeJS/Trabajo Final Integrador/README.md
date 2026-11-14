@@ -1,6 +1,6 @@
 # Trabajo Final Integrador - Desarrollo en Node.js
 
-**Autor:** Nicolas Tissoni
+**Autor:** Nicolas
 **Curso:** Desarrollo en NodeJS
 **Trabajo:** Trabajo Final Integrador - API para Clon de Chat
 
@@ -30,8 +30,8 @@ Trabajo Final Integrador
 
 ## Enlaces de despliegue
 
-- API (Render): <URL de la API en Render>
-- Front-end (Vercel): <URL del front en Vercel>
+- API (Render): https://diplomatura-full-stack.onrender.com
+- Front-end (Vercel): https://front-end-seven-smoky.vercel.app
 
 ## Capturas
 

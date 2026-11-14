@@ -7,7 +7,7 @@ Cliente hecho con React, Vite y TailwindCSS que consume la API de chat. Permite 
 1. Entrar a la carpeta del front-end:
 
    ```bash
-   cd "Trabajo Final Integrador/front-end"
+   cd "Desarrollo en NodeJS/Trabajo Final Integrador/front-end"
    ```
 
 2. Instalar las dependencias:
@@ -39,6 +39,6 @@ Cliente hecho con React, Vite y TailwindCSS que consume la API de chat. Permite 
 ## Despliegue en Vercel
 
 1. Importar el repositorio en Vercel.
-2. Indicar como directorio raíz `Trabajo Final Integrador/front-end`. Vercel detecta Vite automáticamente (build `npm run build`, salida `dist`).
+2. Indicar como directorio raíz `Desarrollo en NodeJS/Trabajo Final Integrador/front-end`. Vercel detecta Vite automáticamente (build `npm run build`, salida `dist`).
 3. Cargar la variable de entorno `VITE_API_URL` con la URL pública de la API en Render.
 4. Agregar la URL que asigne Vercel a la variable `CORS_ORIGIN` de la API.
